@@ -60,7 +60,7 @@ embedding_matrix = ''
 weights=[embedding_matrix]
 
 # Load the model and custom Function
-pretrained_lstm_model = load_model('website/LSTM_Model.h5')
+pretrained_lstm_model = load_model('LSTM_Model.h5')
 
 # Function for data pre-processing
 from Preprocessing import CustomPreprocess
