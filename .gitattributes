@@ -1,0 +1,5 @@
+website/LSTM_Model_keras.keras filter=lfs diff=lfs merge=lfs -text
+website/LSTM_Model.h5 filter=lfs diff=lfs merge=lfs -text
+website/Spam_Detection_Pipeline filter=lfs diff=lfs merge=lfs -text
+website/word_tokenizer.json filter=lfs diff=lfs merge=lfs -text
+website/glove.6B.100d.txt filter=lfs diff=lfs merge=lfs -text
