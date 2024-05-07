@@ -50,7 +50,6 @@ spacy-loggers==1.0.5
 SQLAlchemy==1.4.52
 tensorboard==2.12.3
 tensorboard-data-server==0.7.2
-tensorflow==2.12.0
 tensorflow-estimator==2.12.0
 tensorflow-hub==0.13.0
 tensorflow-intel==2.12.0
