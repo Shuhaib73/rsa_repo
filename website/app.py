@@ -44,7 +44,7 @@ from nltk.stem import PorterStemmer, WordNetLemmatizer
 from model2 import Predict_Message
 
 # Model 3 
-from CV.image_emotion import EmotionDetector
+from COM.image_emotion import EmotionDetector
 
 
 from flask import Flask, render_template, request, flash, redirect, url_for, get_flashed_messages, jsonify, session, Response
@@ -74,8 +74,8 @@ with open('word_tokenizer.json') as f:
 # **********************************
 
 # Model 3 files
-Model = 'CV/Emotion_Detection_Model.h5'
-FaceModel = 'CV/haarcascade_frontalface_default.xml'
+Model = 'COM/Emotion_Detection_Model.h5'
+FaceModel = 'COM/haarcascade_frontalface_default.xml'
 detector = EmotionDetector(Model, FaceModel)
 
 # Create the app object
