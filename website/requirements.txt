@@ -109,6 +109,7 @@ pyparsing==3.1.2
 pyreadline3==3.4.1
 pyrsistent==0.20.0
 pytesseract
+opencv-python
 python-crfsuite==0.9.10
 python-dateutil==2.8.2
 python-engineio==4.9.0
