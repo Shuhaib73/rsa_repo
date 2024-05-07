@@ -1,0 +1,177 @@
+version: "3.1"
+
+intents:
+  - greet
+  - greet_question
+  - greet_question1
+  - greet_morning
+  - greet_afternoon
+  - greet_evening
+  - thank
+  - day_wish
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge_yes
+  - bot_challenge_no
+  - model_info
+  - github
+  - linkedIn
+  - tech_info
+  - author_qa
+  - date_question
+  - time_question
+  - web_question
+  - help_question
+  - unknown_qa
+  - joke
+  - ask_question
+  - tell_travel_destination
+  - ask_about_website
+  - age_question
+  - dob_provided
+
+
+entities:
+  - algorithm_type
+  - Morning
+  - git
+  - linkedin
+  - technologies
+  - name
+  - author
+  - date
+  - time
+  - day
+  - year 
+  - month
+  - website
+  - destination
+  - assist
+  - dob
+
+
+actions:
+  - action_get_current_date
+  - action_calculate_age
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_greet_reply:
+  - text: "I'm good, thanks for asking"
+
+  utter_morning:
+  - text: "Good Morning!"
+
+  utter_afternoon:
+  - text: "Good Afternoon!"
+
+  utter_evening:
+  - text: "Good Evening!"
+
+  utter_daywish:
+  - text: "You too!"
+
+  utter_thank:
+  - text: "You're welcome. It was my pleasure to assist you"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "I'm happy for you"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_model:
+  - text: |
+      Algorithms utilized in this project:
+        - Simple Neural Network
+        - Convolutional Neural Network
+        - Recurrent Neural Network
+        - Long Short-Term Memory Neural Network
+
+  utter_git:
+  - text: | 
+      You can access the Project by following this link:
+      "https://github.com/Shuhaib73?tab=repositories"
+
+  utter_linkedIn:
+  - text: |
+      Please find the LinkedIn link as requested:
+      "https://www.linkedin.com/in/mohamedshuhaib/"
+
+  utter_tech:
+  - text: |
+      Here are few technologies used in this project:
+        - Python
+        - Flask
+        - HTML
+        - CSS
+        - Javascript
+        - Machine Learning
+        - Neural Networks
+        - NLP
+        - AWS
+        - RASA
+
+  utter_author:
+  - text: "Name of Admin: Shuhaib"
+
+  utter_greet1:
+  - text: "I'm doing good, and I trust you're experiencing the same level of positivity"
+  
+  utter_timeq:
+  - text: "Please pay attention, as it's clearly stated in the following conversation."
+
+  utter_ask_dob:
+  - text: "Could you please provide your date of birth (DOB) in the format of YYYY-MM-DD?"
+
+  utter_webname:
+  - text: "Website name: NLP-AIO[Natural Language Processing - All In One Project]"
+
+  utter_helpquestion:
+  - text: "Today, I can assist you with any questions, tasks, or challenges you might have. feel free to let me know how I can support you!"
+
+  utter_unkownqa:
+  - text: | 
+      As an AI, I don't have personal experiences or memory, so I don't have the capability to "know" individuals in the way humans do. However, I'm here to assist you to the best of my abilities based on the information you provide and the interactions we have. If there's anything specific you'd like to share or discuss, feel free to let me know!
+
+  utter_joke:
+  - text: |
+      Two Hollywood stars ran into each other at the door of their psychiatrist’s office.
+      “Hello, there,” said one. “Are you coming or going?”
+      “If I knew that,” said the other, “I wouldn’t be here.”
+
+  utter_ask_question:
+  - text: "Sure! Here's a question for you: If you could travel anywhere in the world, where would you go?"
+
+  utter_great_choice:
+  - text: "Great choice!"
+
+  utter_about_website:
+  - text: | 
+      Our project is a website leveraging Machine Learning ML, Deep Learning (DL), and Artificial Intelligence (AI) to predict sentiment, detect spam messages and object detection. Additionally, it features Rasa for handling user inquiries and is deployed on Amazon Web Services (AWS). For More please feel free to check out GitHub Repository.
+        
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_nothuman:
+  - text: "No, I am a bot."
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

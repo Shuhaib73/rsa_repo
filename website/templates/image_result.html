@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+
+{% block title %} Emotion Detection Page {% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static', filename='image_result.css')}}">
+{% endblock%}
+
+{% block header %}
+    <div class="main-content">
+        <div class="container">
+            <a href="{{url_for('Model3')}}">Go Back</a>
+        </div>
+
+        <div class="result-container">
+            <h1>Detected Emotion</h1>
+            <img class="img_container" src="{{ annotated_image_path }}" alt="Detected Emotion">
+        </div>
+
+    </div>
+
+{% endblock %}
+

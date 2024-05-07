@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %} Logout Page {% endblock %}
+
+{% block body %}
+
+    {% block links %}
+    {% endblock %}
+
+    {% block header %}
+    <!-- <div class="main-content"> -->
+        <div class="container">
+            <h1>Logged Out</h1>
+            <a class="login_btn" href="{{url_for('home')}}">Log In</a>
+        </div>     
+    </div>
+    {% endblock %}
+    
+{% endblock %}

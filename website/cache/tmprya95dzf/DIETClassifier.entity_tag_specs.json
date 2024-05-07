@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-Morning",
+      "2": "I-Morning",
+      "3": "L-Morning",
+      "4": "U-Morning",
+      "5": "B-algorithm_type",
+      "6": "I-algorithm_type",
+      "7": "L-algorithm_type",
+      "8": "U-algorithm_type",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-Morning": 1,
+      "I-Morning": 2,
+      "L-Morning": 3,
+      "U-Morning": 4,
+      "B-algorithm_type": 5,
+      "I-algorithm_type": 6,
+      "L-algorithm_type": 7,
+      "U-algorithm_type": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

@@ -1,0 +1,147 @@
+
+.form_container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    margin-top: 15%;
+    padding: 5px;
+}
+
+.Message_input {
+    width: 600px; /* Set width of the text box */
+    height: 100px;
+    margin-bottom: 10px; /* Add margin below the text box */
+
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 4px rgb(0, 0, 0, 0.4);
+
+    color: black;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+
+/* Effects */
+.Message_input {
+    border-top-left-radius: 23px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 23px;
+
+    animation: anime1 infinite 5s;
+}
+
+@keyframes anime1 {
+    0% {
+        box-shadow: 5px 5px 4px rgba(58, 99, 113, 0.4);
+    }
+    20% {
+        box-shadow: 5px 5px 4px rgba(72, 138, 162, 0.4);
+    }
+    50% {
+        box-shadow: 5px 5px 4px rgba(72, 154, 181, 0.4);
+    }
+    80% {
+        box-shadow: 5px 5px 4px rgba(84, 183, 216, 0.4);
+    }
+    90% {
+        box-shadow: 5px 5px 4px rgba(58, 99, 113, 0.4);
+    }
+}
+
+/* Button */
+.submit_bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; 
+    height: 30px;
+
+    cursor: pointer;
+    margin-top: 3%;
+    border: none;
+
+    border-left: 3px solid;
+    border-right: 3px solid;
+    border-radius: 5px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: 30%;
+}
+
+.submit_bt:hover {
+    background-color: rgb(56, 255, 192);
+    color: rgb(21, 21, 21);
+    box-shadow: 5px 8px 20px rgb(56, 255, 255);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+/* Alert */
+
+.error-message {
+    /* margin-left: 38%;
+    margin-top: 5%; */
+    display: flex;
+    color: white;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    
+    bottom: 1px;
+    height: 50px;
+    width: 400px;
+
+    background-color: rgb(255, 0, 0, 0.3);
+    color: rgb(11, 10, 10);
+    font-weight: 700;
+    border: 1px solid red;
+    border-radius: 10px;
+    /* padding: 1px 3px; */
+
+    animation: fadeout 8s forwards;
+}
+
+.success_message {
+    /* margin-left: 38%;
+    margin-top: 5%; */
+    display: flex;
+    color: white;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    
+    bottom: auto;
+    height: 50px;
+    width: 400px;
+
+    background-color: rgba(20, 255, 118, 0.861);
+    color: rgb(11, 10, 10);
+    font-weight: 700;
+    border: 1px solid rgb(37, 255, 106);
+    border-radius: 10px;
+    /* padding: 1px 3px; */
+
+    animation: fadeout 6s forwards;
+
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+    
+}

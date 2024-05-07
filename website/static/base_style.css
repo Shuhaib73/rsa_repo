@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.user-img {
+	width: 58px;
+	border-radius: 100%;
+	height: 50px;
+	border: 1px solid #6efff1;
+}
+
+/* Sidebar */
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 80px;
+	background-color: #12171e;
+	padding: .4rem .8rem;
+
+	overflow-y: scroll;
+
+	transition: all 0.5s ease;
+}
+
+.sidebar::-webkit-scrollbar {
+	display: none; /* Remove scrollbar width */
+ }
+
+
+/*  */
+
+.sidebar.active ~.main-content {
+	left: 250px;
+	width: calc(100% - 250px);
+}
+
+.sidebar.active {
+	width: 250px;
+}
+
+
+
+/* btn  */
+.sidebar #btn {
+	position: absolute;
+	color: #fff;
+	top: .4rem;
+	left: 50%;
+	font-size: 1.2rem;
+	line-height: 50px;
+
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.sidebar.active #btn {
+	left: 90%;
+}
+
+.sidebar .top .logo {
+	color: #fff;
+	display: flex;
+	height: 50px;
+	width: 100%;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.sidebar.active .top .logo {
+	opacity: 1;
+}
+
+/* logo */
+.top .logo i {
+	font-size: 2rem;
+	margin-right: 5px;
+}
+
+/* user */
+
+.user {
+	display: flex;
+	align-items: center;
+	margin: 1rem 0;
+}
+
+.user p {
+	color: #fff;
+	opacity: 1;
+	margin-left: 1rem;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.sidebar p {
+	opacity: 0;
+}
+
+.sidebar.active p {
+	opacity: 1;
+}
+
+/* list items */
+
+.sidebar ul li {
+	position: relative;
+	list-style-type: none;
+	height: 50px;
+	width: 90%;
+	margin: 0.8rem auto;
+	line-height: 50px;
+}
+
+.sidebar ul li a {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+	background-color: #fff;
+	color: #12171e;
+}
+
+
+/* icons */
+
+.sidebar ul li a i {
+	min-width: 50px;
+	text-align: center;
+	height: 50px;
+	border-radius: 12px;
+	line-height: 50px;
+}
+
+.sidebar .nav-item {
+	opacity: 0;
+}
+
+.sidebar.active .nav-item {
+	opacity: 1;
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+
+
+/* Main content */
+
+.main-content {
+	position: relative;
+	background-color: #eee;
+	min-height: 100vh;
+	top: 0;
+	left: 80px;
+	transition: all 0.5s ease-in-out;
+	width: calc(100% - 80px);
+	/* padding: 1rem; */
+}
+
+
+/* Container */
+.container {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+
+	box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+}
+
+.container h1 {
+	font-size: 1.2rem;
+}
+
+.container a {
+	text-decoration: none;
+	font-weight: 600;
+	color: #eee;
+	background-color: #12171e;
+
+	width: 110px;
+	height: 28px;
+	padding-bottom: 2.5px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 10px;
+}
+
+.container a:hover {
+	background: #20677a;
+	color: #fff;
+	width: 108px;
+	height: 28px;
+	font-weight: 500;
+}
+
+/* active tab */
+a:is(:link, :active, :visited).active {
+	background-color: #eee;
+	color: #12171e;
+}
+
+
+/* background */
+.main_bg_cls {
+    display: flex;
+    height: 90vh;
+    background-image: url('./images/bg_1.png');
+    background-color: #000;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.info_cls {
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+	align-items: right;
+	padding-left: 50%;
+	padding-top: 10%;
+}
+
+.info_cls h3 {
+	font-size: 30px;
+
+	animation: anime_text infinite 20s;
+}
+
+.info_cls h4 {
+	font-size: 20px;
+	animation: anime_text2 infinite 10s;
+}
+
+.info_cls p {
+	padding-top: 4rem;
+	font-weight: 600;
+
+	color: rgba(17, 91, 105, 0.703);
+}
+
+/* Effects */
+
+@keyframes anime_text {
+	0% {
+		color: #12171e;
+	}
+	30% {
+		color: #4141b1;
+	}
+	50% {
+		color: #5740d8;
+	}
+	70% {
+		color: #762c31;
+	}
+	90% {
+		color: #543bf5;
+	}
+}
+
+@keyframes anime_text2 {
+	0% {
+		color: rgb(18, 17, 16);
+	}
+	20% {
+		color: rgb(79, 70, 54);
+	}
+	60% {
+		color: rgb(115, 100, 72);
+	}
+	80% {
+		color: rgb(134, 113, 75);
+	}
+}

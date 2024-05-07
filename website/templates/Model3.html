@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block title %} Model 3 Page {% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static', filename='Model3_styles.css')}}">
+{% endblock%}
+
+{% block header %}
+    <div class="main-content">
+        <div class="container">
+            <h1>Model in Progress</h1>
+            <a href="{{url_for('Logout')}}">Logout</a>
+        </div>
+
+        <div class="main_container">
+            <form class="form_container1" action="{{url_for('Model3')}}" method="POST" enctype="multipart/form-data">
+                <label for="myimage" class="label1">Image Face-Emotion Recognition:</label>
+                <input type="file" id="myimage" name="image", accept="image/png, image/jpeg, image/jpg">
+                <input type="submit", class="button_1",  value="Upload Image">
+            </form><br/><br/>
+
+            <form class="form_container2" action="{{url_for('Model3')}}" method="POST">
+                <p>Real Time Emotion Recognition</p><br/>
+                <input type="submit", value="Start a Video", name='submit_button', class="button_2">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+

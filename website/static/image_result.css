@@ -1,0 +1,13 @@
+
+.img_container {
+    display: flex;
+    width: 450px;
+    height: 430px;
+
+    justify-content: center;
+    margin-left: 25%;
+}
+
+.result-container h1 {
+    margin-left: 25%;
+}

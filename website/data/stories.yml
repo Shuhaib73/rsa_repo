@@ -1,0 +1,130 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: greet_question
+  - action: utter_greet_reply
+
+- story: greet day
+  steps:
+  - intent: greet_question1
+  - action: utter_greet1
+
+- story: time question
+  steps:
+  - intent: time_question
+  - action: utter_timeq
+
+- story: web question
+  steps:
+  - intent: web_question
+  - action: utter_webname
+
+- story: web question 2
+  steps:
+  - intent: ask_about_website
+  - action: utter_about_website
+
+- story: assist today
+  steps: 
+  - intent: help_question
+  - action: utter_helpquestion
+
+- story: unknown_question
+  steps:
+  - intent: unknown_qa
+  - action: utter_unkownqa
+
+- story: joke day
+  steps:
+  - intent: joke
+  - action: utter_joke
+
+- story: Ask for a question
+  steps:
+  - intent: ask_question
+  - action: utter_ask_question
+
+- story: Provide travel destination
+  steps:
+  - intent: tell_travel_destination
+  - action: utter_great_choice
+
+- story: wish
+  steps:
+  - intent: greet_morning
+  - action: utter_morning
+  - intent: greet_afternoon
+  - action: utter_afternoon
+
+- story: wish evn
+  steps:
+  - intent: greet_evening
+  - action: utter_evening
+  
+- story: day wishes
+  steps:
+  - intent: day_wish
+  - action: utter_daywish
+
+- story: thanks
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: links
+  steps:
+  - intent: github
+  - action: utter_git
+  - intent: linkedIn
+  - action: utter_linkedIn
+
+- story: model info
+  steps:
+  - intent: model_info
+  - action: utter_model
+  - intent: tech_info
+  - action: utter_tech
+  
+- story: date info
+  steps:
+  - intent: date_question
+  - action: action_get_current_date
+
+- story: age info
+  steps:
+  - intent: age_question
+  - action: utter_ask_dob
+  - intent: dob_provided
+  - action: action_calculate_age
+
+- story: author info
+  steps:
+  - intent: author_qa
+  - action: utter_author

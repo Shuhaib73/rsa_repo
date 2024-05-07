@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Shuhaib">
+
+        <title>{% block title %}Home Page{% endblock %}</title>
+
+        {% block styles %}
+        <link rel="stylesheet" href="{{url_for('static', filename='base_style.css')}}">
+        {% endblock %}
+
+        <link rel="icon" href="static/images/web_logo.png" type="image/x-icon">
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  <!-- Box icons -->
+
+        <script src="https://kit.fontawesome.com/55d7ca6d4f.js" crossorigin="anonymous"></script> <!--font awesome-->
+
+        <!-- icons pro activation -->
+        <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-a60ddbceb7292f11c9e430d067b1eb9f.css?vsn=d"
+        >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
+      >
+
+
+    </head>
+
+    {% block body %}
+    <body>
+
+        <div class="sidebar">
+            <div class="top">
+                <div class="logo">
+                    <i class='bx bxl-codepen'></i>
+                    <span>NLP-AIO</span>
+                </div>
+                <i class='bx bx-menu' id="btn"></i>
+            </div>
+            <div class="user">
+                <img src="static/images/user_img.png" alt="loading" class="user-img">
+                <div>
+                    <p class="cold">Shuhaib.</p>
+                    <p>Admin</p>
+                </div>
+            </div>
+            {% block links %}
+            <ul>
+                <li>
+                    <a href="{{url_for('home')}}">
+                        <i class='bx bxs-grid-alt'></i>
+                        <span class="nav-item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('Model1')}}">
+                        <i class="fa-light fa-chart-network"></i>
+                        <span class="nav-item">Model1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('Model2')}}">
+                        <i class="fa-solid fa-brain-circuit"></i>
+                        <span class="nav-item">Model2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('Model3')}}">
+                        <i class="fa-sharp fa-solid fa-print-magnifying-glass"></i>
+                        <span class="nav-item">Model3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('Contact')}}">
+                        <i class='bx bxl-gmail'></i>
+                        <span class="nav-item">ContactUs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('webhook')}}">
+                        <i class="fa-sharp fa-solid fa-headset"></i>
+                        <span class="nav-item">Rasa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Shuhaib73", target="_blank">
+                        <i class='bx bxl-github'></i>
+                        <span class="nav-item">GitHub</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{url_for('Setting')}}">
+                        <i class='bx bx-cog' ></i>
+                        <span class="nav-item">Setting</span>
+                    </a>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <a href="{{url_for('Logout')}}">
+                        <i class='bx bx-log-out'></i>
+                        <span class="nav-item">Logout</span>
+                    </a>
+                </li>
+            </ul>
+            {% endblock %}
+        </div>
+
+        {% block header %}
+        <div class="main-content">
+            <div class="container">
+                <h1>Welcome back, <strong>User!</strong></h1>
+                <a href="{{url_for('Logout')}}">Logout</a>
+            </div>
+            <div class="main_bg_cls">
+                <div class="info_cls">
+                    <h3>Artificial Intelligence</h3>
+                    <h4>For Business Applications.</h4>
+
+                    <p>Uses Machine Learning, Deep Learning and Neural Network Architectures to analyze and predict the sentiments, aiding businesses in making informed decisions and enhancing quality and user experience. </p>
+                </div>
+            </div>
+        </div>
+        
+        {% endblock %}
+
+        {% block body_container %}
+            
+        {% endblock %}
+
+    </body>
+    {% endblock %}
+
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function () {
+            sidebar.classList.toggle('active');
+        };
+
+        // active - tab
+        const activePage = window.location.pathname;
+        const navLinks = document.querySelectorAll('.sidebar ul li a'); 
+        navLinks.forEach(link => {
+            if(link.href.includes(activePage)){
+                link.classList.add('active');
+            }
+        });
+        
+    </script>
+</html>

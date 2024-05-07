@@ -1,0 +1,345 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hii
+    - hiii
+    - hello there
+    - hey there
+    - hey dude
+    - ola
+
+- intent: greet_question
+  examples: |
+    - how are you?
+    - hw r u?
+    - what about you?
+    - how are you feeling?
+    - wtu?
+    - you?
+    - u?
+    - how about you?
+    - about you?
+    - and you?
+    - and u?
+
+
+- intent: greet_question1
+  examples: |
+    - how's your day?
+    - how are you doing today?
+    - how's your day going?
+
+
+- intent: greet_morning
+  examples: |
+    - good [morning](Morning)
+    - [moin](Morning)
+    - [goodmorning](Morning)
+    - [gm](Morning)
+    - gud [mrng](Morning)
+    - [gudmrng](Morning)
+    - gud morning
+
+- intent: greet_afternoon
+  examples: |
+    - good afternoon
+    - goodafternoon
+    - gf
+    - good noon
+    - goodnoon
+    - gud noon
+
+- intent: greet_evening
+  examples: |
+    - good evening
+    - goodevening
+    - ge
+    - good noeveningon
+    - gud evening
+   
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - appreciate it
+    - many thanks
+    - thanks for help
+    - thnk you
+
+- intent: day_wish
+  examples: |
+    - have a nice day
+    - nice day
+    - gud day 
+    - good day
+    - gudday
+    - have a great day
+    - great day
+    - see you around
+    
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - i'm doing good
+    - im doing good
+    - i'm good
+    - im gud
+    - so far good
+    - so far great
+    - great
+    - feeling like a king
+    - wonderful
+    - i'm happy
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+
+- intent: model_info
+  examples: |
+    - what [models](algorithm_type) have been trained?
+    - which [models](algorithm_type) are employed?
+    - which [models](algorithm_type) have been utilized?
+    - what [algorithms](algorithm_type) were employed?
+    - which [algorithms](algorithm_type) are implemented?
+    - what [algorithms](algorithm_type) have been trained?
+    - [algorithms](algorithm_type) list?
+    - [models](algorithm_type) list?
+
+- intent: tech_info
+  examples: |
+    - what are the tools[technologies] used?
+    - tools[technologies] used?
+    - technologies[technologies]
+    - tech[technologies]
+
+
+- intent: github
+  examples: |
+    - [github](git)
+    - [git hub](git)
+    - [git](git)
+    - [project link](git)
+    - Can you give me the [Github](git) link?
+
+- intent: linkedIn
+  examples: |
+    - [linkedin](linkedin)
+    - [linked in](linkedin)
+    - Can you give me the [Linked In](linkedin) link?
+    - help me with [LinkedIn](linkedin) link?
+
+
+- intent: author_qa
+  examples: |
+    - Who built this [app][author]
+    - who made you?
+    - who built you?
+    - author name?
+    - admin name?
+    - developer name?
+    - who made this [website][author]?
+    - who kept your name?
+    - who named you? 
+
+- intent: date_question
+  examples: |
+    - what is the current [date](date)?
+    - can you tell me today's [Date](date)?
+    - current [Date](date)?
+    - today's [date](date)?
+    - [date](date)
+    - tell me the [date](date)?
+    - Do you know what day is [today](day)?
+    - what day is [today](day)?
+    - you know the [day](day) name?
+    - [day](day)?
+    - tell me the [day](day)?
+    - what is the [year](year)?
+    - tell me the [year](year)?
+    - do you know what [year](year) it is?
+    - [year](year)?
+    - do you know the [year](year)?
+    - what about [year](year)?
+    - Do you know the current [month](month)?
+    - what day is current [month](month)?
+    - you know the [month](month) name?
+    - [month](month)?
+    - what is the [month](month)?
+    - what about [month](month)?
+    - tell me the [month](month)?
+
+  
+- intent: time_question
+  examples: |
+    - what is the current [time](time)?
+    - [time](time)
+    - [Time](time)
+    - can you tell me the time?
+    - can you give me the current time?
+    - what is the time now?
+    - do you know the time?
+
+- intent: age_question
+  examples: |
+    - how old am I?
+    - can you tell me my age?
+    - what is my age?
+    - how many year have i lived?
+    - tell me how old i am?
+
+- intent: dob_provided
+  examples: |
+    - My date of birth is [1990-01-01](dob)
+    - I was born on [1990-01-01](dob)
+    - [1990-01-01](dob)
+    - It's [1990-01-01](dob)
+    - here It is [1990-01-01](dob)
+
+- intent: web_question
+  examples: |
+    - do you know the [website](website) name?
+    - tell me the [website](website) name?
+    - give me the [website](website) name?
+    - full form of NLP-AIO?
+    - what is NLP-AIO?
+
+- intent: help_question
+  examples: |
+    - how can you [assist](assist) me today?
+    - how can you [help](assist) me today?
+    - how will you help me?
+    - how can you help me?
+    - What support can you provide today?
+    - What [assistance](assist) are you able to offer me today?
+    - What kind of help do you have available for me today?
+    - How might I benefit from your assistance today?
+    - What solutions or advice do you have for me today?
+    - How can I rely on you for assistance today?
+
+- intent: unknown_qa
+  examples: |
+    - Do you know me?
+    - you know me?
+    - you know my name?
+    - do you know my name?
+
+- intent: joke
+  examples: |
+    - tell me a joke
+    - give me a joke
+    - can you tell a joke?
+    - I need a laugh, tell me a joke
+    - make me laugh
+    - joke time
+    - share a joke
+
+- intent: ask_question
+  examples: |
+    - ask me a question?
+    - do you have any question?
+    - any question?
+    - any question for me?
+    - have any question for today?
+
+- intent: tell_travel_destination
+  examples: |
+    - I would go to [destination](destination)
+    - My dream destination is [destination](destination)
+    - If I could travel anywhere, I'd choose [destination](destination)
+    - [Destination](destination) is where I'd go
+    - I want to visit [destination](destination)
+    - [Destination](destination)
+
+- intent: ask_about_website
+  examples: |
+    - what is this website all about?
+    - what is this website?
+    - what is this project?
+    - can you explain this website?
+    - tell me about this website
+    - I want to know more about this website
+    - can you explain this project?
+
+- intent: bot_challenge_yes
+  examples: |
+    - are you a bot?
+    - am I talking to a bot?
+    - are you bot?
+    - r u a bot?
+    - r u bot?
+    - who are you?
+    - do you know your name
+    - what is your [name](name)?
+    - your [name](name)?
+    - what's your [Name](name)?
+
+    
+- intent: bot_challenge_no
+  examples: |
+    - am I talking to a human?
+    - are you a human?
+    - r u human?
+    - are you human?
+    - r u a human?

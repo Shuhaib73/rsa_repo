@@ -1,0 +1,14 @@
+.fa-users-gear {
+    font-size: 27px;
+
+    cursor: pointer;
+}
+
+.set_info {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 10%;
+}

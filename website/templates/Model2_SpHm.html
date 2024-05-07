@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+
+{% block title %} Spam Detection Page {% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static', filename='Model2_styles.css')}}">
+{% endblock%}
+
+{% block header %}
+    <div class="main-content">
+        <div class="container">
+            <h1>Spam-Ham Detection Model</h1>
+            <a href="{{url_for('Logout')}}">Logout</a>
+        </div>
+    
+    
+        <div class="form_container">
+            <form action="{{url_for('Model2')}}" method="POST">
+                <input type="text" name="mail_msg" class="Message_input" placeholder="Enter the Message here..." required />
+                <button type="submit" class="submit_bt">Predict</button>
+            </form>
+            <br>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="error-messages">
+                    {% for category, message in messages %}
+                        {% if category == 'error' %}
+                            <div class="error-message">
+                                {{ message }}
+                            </div>
+                        {% elif category == 'success' %}
+                            <div class="success_message">
+                                {{ message }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+        
+    </div>
+
+{% endblock %}
+

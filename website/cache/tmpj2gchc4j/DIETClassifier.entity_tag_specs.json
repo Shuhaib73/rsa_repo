@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-Morning",
+      "2": "I-Morning",
+      "3": "L-Morning",
+      "4": "U-Morning",
+      "5": "B-algorithm_type",
+      "6": "I-algorithm_type",
+      "7": "L-algorithm_type",
+      "8": "U-algorithm_type",
+      "9": "B-git",
+      "10": "I-git",
+      "11": "L-git",
+      "12": "U-git",
+      "13": "B-linkedin",
+      "14": "I-linkedin",
+      "15": "L-linkedin",
+      "16": "U-linkedin",
+      "17": "B-name",
+      "18": "I-name",
+      "19": "L-name",
+      "20": "U-name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-Morning": 1,
+      "I-Morning": 2,
+      "L-Morning": 3,
+      "U-Morning": 4,
+      "B-algorithm_type": 5,
+      "I-algorithm_type": 6,
+      "L-algorithm_type": 7,
+      "U-algorithm_type": 8,
+      "B-git": 9,
+      "I-git": 10,
+      "L-git": 11,
+      "U-git": 12,
+      "B-linkedin": 13,
+      "I-linkedin": 14,
+      "L-linkedin": 15,
+      "U-linkedin": 16,
+      "B-name": 17,
+      "I-name": 18,
+      "L-name": 19,
+      "U-name": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
